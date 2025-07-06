@@ -10,7 +10,6 @@ export default function Editor({displayName, language, value, onChange}) { //dis
         onChange(value); //this function is called when value of editor changes based on user input
     }
     return (
-    <div>
       <div className="editor-container">
         <div className="editor-title">
             {displayName}                 
@@ -19,12 +18,12 @@ export default function Editor({displayName, language, value, onChange}) { //dis
 
         <CodeMirror 
         value={value} //shows code in the editor
+        height='300px' //height of the editor
         extensions={[language]} //editor language(html, css, js)
         theme={material} //theme of the editor
         className='code-mirror-wrapper'
         onChange={handleChange}   //this function is called when value of editor changes based on user input
         /> 
       </div>
-    </div>
   )
 }
