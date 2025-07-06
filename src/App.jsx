@@ -3,13 +3,30 @@ import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
 import Editor from './components/Editor'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
   const [htmlCode, setHtmlCode] = useState('');
   const [cssCode, setCssCode] = useState('');
   const [jsCode, setJsCode] = useState('');
+  const [srcDoc, setSrcDoc] = useState('');
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {  // timeout is for few secs delay and srcDoc helps to render down these html, css, js into the iframe
+      setSrcDoc(`                       
+        <html>
+          <body>${htmlCode}</body>
+          <style>${cssCode}</style>
+          <script>${jsCode}</script>
+        </html>
+        `
+      )
+    }, 250)       //250ms delay
+    return() => clearTimeout(timeout) //to clear out the timeout
+  }, [htmlCode,cssCode,jsCode]
+)
+
+ 
   return (
     <>
     <div className='pane top-pane'>
@@ -34,6 +51,7 @@ function App() {
     </div>
       <div className='pane'>
         <iframe 
+        srcDoc={srcDoc}
         title='output'
         sandbox='allow-scripts'
         style={{border: 'none'}}

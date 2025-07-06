@@ -18,7 +18,6 @@ export default function Editor({displayName, language, value, onChange}) { //dis
 
         <CodeMirror 
         value={value} //shows code in the editor
-        height='300px' //height of the editor
         extensions={[language]} //editor language(html, css, js)
         theme={material} //theme of the editor
         className='code-mirror-wrapper'

@@ -6,6 +6,7 @@ body{
 
 .top-pane{
   background-color: hsl(225, 6%, 25%); /* hsl is a color format (hue, saturation, lightness*/ 
+  margin-top: 1rem;
 }
 
 .pane{
