@@ -4,11 +4,12 @@ import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
 import Editor from './components/Editor'
 import { useEffect, useState } from 'react'
+import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
-  const [htmlCode, setHtmlCode] = useState('');
-  const [cssCode, setCssCode] = useState('');
-  const [jsCode, setJsCode] = useState('');
+  const [htmlCode, setHtmlCode] = useLocalStorage('html', '');
+  const [cssCode, setCssCode] = useLocalStorage('css', '');
+  const [jsCode, setJsCode] = useLocalStorage('js', '');
   const [srcDoc, setSrcDoc] = useState('');
 
   useEffect(() => {
