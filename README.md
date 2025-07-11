@@ -1,12 +1,30 @@
-# React + Vite
+#  Live Code Editor – CodePen Clone (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **CodePen-inspired live code editor** built using **React.js**, where users can write and preview HTML, CSS, and JavaScript code in real-time. It’s a great tool for testing, learning, and sharing front-end snippets.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Live HTML, CSS, and JavaScript editor panes
+- Real-time preview of output as you type
+- Auto-saving code using localStorage
+- Responsive and minimal UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- **React.js** – Component-based UI
+- **JavaScript (ES6+)** – Core logic
+- **HTML5 / CSS3** – For layout and styling
+- **localStorage** – For saving code locally
+- **CodeMirror** – For syntax highlighting 
+
+---
+
+## Screenshots
+
+![day39project](https://github.com/user-attachments/assets/a353ca59-ffc3-4f16-ae8c-ab016cbf7d68)
+
+
